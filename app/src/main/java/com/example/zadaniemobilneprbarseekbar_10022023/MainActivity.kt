@@ -34,5 +34,18 @@ class MainActivity : AppCompatActivity() {
         obraz3.layoutParams.width = StandardowaSzerokosc
 
 
+        seekbarpion1.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(seek: SeekBar, progress: Int, fromUser: Boolean) {
+            obraz1.layoutParams.height = StandardowaWysokosc + progress
+            }
+
+            override fun onStartTrackingTouch(seek: SeekBar?) {
+                TODO("Not yet implemented")
+            }
+
+            override fun onStopTrackingTouch(seek: SeekBar?) {
+                TODO("Not yet implemented")
+            }
+        })
     }
 }

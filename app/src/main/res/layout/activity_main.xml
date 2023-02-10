@@ -9,8 +9,8 @@
     <ProgressBar
         android:id="@+id/progressBarPion"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="94dp"
-        android:layout_height="441dp"
+        android:layout_width="114dp"
+        android:layout_height="523dp"
         android:progress="100"
         android:rotation="-90"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,15 +22,17 @@
 
     <ImageView
         android:id="@+id/obraz1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="137dp"
+        android:layout_height="151dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.159"
+        app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.203"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintVertical_bias="0.189"
+        tools:srcCompat="@drawable/red_apple"
+        tools:visibility="visible" />
 
     <ImageView
         android:id="@+id/obraz2"
@@ -54,7 +56,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.844"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@tools:sample/avatars"
+        tools:visibility="visible" />
 
     <Button
         android:id="@+id/btnReset"
@@ -126,17 +129,17 @@
     <SeekBar
         android:id="@+id/seekBarPion2"
         style="@style/Widget.AppCompat.SeekBar.Discrete"
-        android:layout_width="128dp"
-        android:layout_height="29dp"
+        android:layout_width="122dp"
+        android:layout_height="30dp"
         android:max="10"
         android:progress="10"
         android:rotation="-90"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintHorizontal_bias="0.611"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.544" />
+        app:layout_constraintVertical_bias="0.554" />
 
     <SeekBar
         android:id="@+id/seekbarPion1"
