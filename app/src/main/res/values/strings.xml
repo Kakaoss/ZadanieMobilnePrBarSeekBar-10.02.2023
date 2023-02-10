@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ZadanieMobilnePrBarSeekBar-10.02.2023</string>
+    <string name="tak">tak</string>
+    <string name="reset">RESET</string>
 </resources>

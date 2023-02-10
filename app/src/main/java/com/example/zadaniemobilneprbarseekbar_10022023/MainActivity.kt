@@ -1,5 +1,6 @@
 package com.example.zadaniemobilneprbarseekbar_10022023
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -8,8 +9,9 @@ import android.widget.SeekBar
 
 class MainActivity : AppCompatActivity() {
 
-    private val StandardowaSzerokosc = 100;
-    private val StandardowaWysokosc = 100;
+    private val StandardowaSzerokosc = 250;
+    private val StandardowaWysokosc = 250;
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -40,11 +42,11 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onStartTrackingTouch(seek: SeekBar?) {
-                TODO("Not yet implemented")
+
             }
 
             override fun onStopTrackingTouch(seek: SeekBar?) {
-                TODO("Not yet implemented")
+
             }
         })
     }
