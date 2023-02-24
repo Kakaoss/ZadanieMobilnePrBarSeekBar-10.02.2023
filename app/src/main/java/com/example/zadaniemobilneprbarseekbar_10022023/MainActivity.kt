@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
         seekbarPoziom1.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(seek: SeekBar, progress: Int, fromUser: Boolean) {
                 obraz1.scaleX =  progress/100f
-                changeProgressBarPoziom(progressBarPoziom,seekbarpion1,seekbarpion2,seekbarpion3);
+                changeProgressBarPoziom(progressBarPoziom,seekbarPoziom1,seekbarPoziom2,seekbarPoziom3);
             }
 
             override fun onStartTrackingTouch(seek: SeekBar?) {
@@ -106,7 +106,7 @@ class MainActivity : AppCompatActivity() {
         seekbarPoziom2.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(seek: SeekBar, progress: Int, fromUser: Boolean) {
                 obraz2.scaleX =  progress/100f
-                changeProgressBarPoziom(progressBarPoziom,seekbarpion1,seekbarpion2,seekbarpion3);
+                changeProgressBarPoziom(progressBarPoziom,seekbarPoziom1,seekbarPoziom2,seekbarPoziom3);
             }
 
             override fun onStartTrackingTouch(seek: SeekBar?) {
@@ -120,7 +120,7 @@ class MainActivity : AppCompatActivity() {
         seekbarPoziom3.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(seek: SeekBar, progress: Int, fromUser: Boolean) {
                 obraz3.scaleX =  progress/100f
-                changeProgressBarPoziom(progressBarPoziom,seekbarpion1,seekbarpion2,seekbarpion3);
+                changeProgressBarPoziom(progressBarPoziom,seekbarPoziom1,seekbarPoziom2,seekbarPoziom3);
             }
 
             override fun onStartTrackingTouch(seek: SeekBar?) {
@@ -137,7 +137,7 @@ class MainActivity : AppCompatActivity() {
     fun changeProgressBarPion(progressBarPion:ProgressBar,seekbarpion1:SeekBar,seekbarpion2:SeekBar,seekbarpion3:SeekBar){
         progressBarPion.progress = (seekbarpion1.progress + seekbarpion2.progress + seekbarpion3.progress)/3
     }
-    fun changeProgressBarPoziom(progressBarPion:ProgressBar,seekbarPoziom1:SeekBar,seekbarPoziom2:SeekBar,seekbarPoziom3:SeekBar){
-        progressBarPion.progress = (seekbarPoziom1.progress + seekbarPoziom2.progress + seekbarPoziom3.progress)/3
+    fun changeProgressBarPoziom(progressBarPoziom:ProgressBar,seekbarPoziom1:SeekBar,seekbarPoziom2:SeekBar,seekbarPoziom3:SeekBar){
+        progressBarPoziom.progress = (seekbarPoziom1.progress + seekbarPoziom2.progress + seekbarPoziom3.progress)/3
     }
 }
