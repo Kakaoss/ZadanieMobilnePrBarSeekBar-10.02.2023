@@ -10,8 +10,7 @@ import android.widget.SeekBar
 
 class MainActivity : AppCompatActivity() {
 
-    private val StandardowaSzerokosc = 250;
-    private val StandardowaWysokosc = 250;
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,20 +30,13 @@ class MainActivity : AppCompatActivity() {
         val progressBarPoziom = findViewById<ProgressBar>(R.id.progressBarPoziom)
 
 
-        obraz1.layoutParams.height = StandardowaWysokosc
-        obraz1.layoutParams.width = StandardowaSzerokosc
-        obraz2.layoutParams.height = StandardowaWysokosc
-        obraz2.layoutParams.width = StandardowaSzerokosc
-        obraz3.layoutParams.height = StandardowaWysokosc
-        obraz3.layoutParams.width = StandardowaSzerokosc
 
         Button_reset.setOnClickListener {
 
         }
         seekbarpion1.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(seek: SeekBar, progress: Int, fromUser: Boolean) {
-                obraz1.layoutParams.height = StandardowaWysokosc + progress
-                obraz1.requestLayout();
+                obraz1.scaleY =  progress/100f
                 changeProgressBarPion(progressBarPion,seekbarpion1,seekbarpion2,seekbarpion3);
             }
 
