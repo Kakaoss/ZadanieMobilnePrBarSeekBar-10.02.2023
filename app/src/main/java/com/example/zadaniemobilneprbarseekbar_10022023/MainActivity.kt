@@ -56,6 +56,36 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
+        seekbarpion2.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(seek: SeekBar, progress: Int, fromUser: Boolean) {
+                obraz2.scaleY =  progress/100f
+                changeProgressBarPion(progressBarPion,seekbarpion1,seekbarpion2,seekbarpion3);
+            }
+
+            override fun onStartTrackingTouch(seek: SeekBar?) {
+
+            }
+
+            override fun onStopTrackingTouch(seek: SeekBar?) {
+
+            }
+        })
+        seekbarpion3.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(seek: SeekBar, progress: Int, fromUser: Boolean) {
+                obraz3.scaleY =  progress/100f
+                changeProgressBarPion(progressBarPion,seekbarpion1,seekbarpion2,seekbarpion3);
+            }
+
+            override fun onStartTrackingTouch(seek: SeekBar?) {
+
+            }
+
+            override fun onStopTrackingTouch(seek: SeekBar?) {
+
+            }
+        })
+
+
 
     }
     fun changeProgressBarPion(progressBarPion:ProgressBar,seekbarpion1:SeekBar,seekbarpion2:SeekBar,seekbarpion3:SeekBar){
