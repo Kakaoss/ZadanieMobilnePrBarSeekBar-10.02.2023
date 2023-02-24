@@ -32,7 +32,14 @@ class MainActivity : AppCompatActivity() {
 
 
         Button_reset.setOnClickListener {
-
+            seekbarpion1.progress = 100
+            seekbarpion2.progress = 100
+            seekbarpion3.progress = 100
+            seekbarPoziom1.progress = 100
+            seekbarPoziom2.progress = 100
+            seekbarPoziom3.progress = 100
+            progressBarPoziom.progress = 100
+            progressBarPion.progress = 100
         }
         seekbarpion1.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(seek: SeekBar, progress: Int, fromUser: Boolean) {
