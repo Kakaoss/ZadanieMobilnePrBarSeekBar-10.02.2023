@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.SeekBar
 
 class MainActivity : AppCompatActivity() {
@@ -21,11 +22,13 @@ class MainActivity : AppCompatActivity() {
         val obraz3 = findViewById<ImageView>(R.id.obraz3)
         val Button_reset = findViewById<Button>(R.id.btnReset)
         val seekbarpion1 = findViewById<SeekBar>(R.id.seekBarpion1)
-        val seekbarpion2 = findViewById<SeekBar>(R.id.seekBarPion2)
-        val seekbarpion3 = findViewById<SeekBar>(R.id.seekBarPion3)
-        val seekbarPoziom1 = findViewById<SeekBar>(R.id.seekBarPoziom1)
-        val seekbarPoziom2 = findViewById<SeekBar>(R.id.seekBarPoziom2)
-        val seekbarPoziom3 = findViewById<SeekBar>(R.id.seekBarPoziom3)
+        val seekbarpion2 = findViewById<SeekBar>(R.id.seekBarpion2)
+        val seekbarpion3 = findViewById<SeekBar>(R.id.seekBarpion3)
+        val seekbarPoziom1 = findViewById<SeekBar>(R.id.seekBarpoziom1)
+        val seekbarPoziom2 = findViewById<SeekBar>(R.id.seekBarpoziom2)
+        val seekbarPoziom3 = findViewById<SeekBar>(R.id.seekBarpoziom3)
+        val progressBarPion = findViewById<ProgressBar>(R.id.progressBarPion)
+        val progressBarPoziom = findViewById<ProgressBar>(R.id.progressBarPoziom)
 
 
         obraz1.layoutParams.height = StandardowaWysokosc
@@ -35,7 +38,9 @@ class MainActivity : AppCompatActivity() {
         obraz3.layoutParams.height = StandardowaWysokosc
         obraz3.layoutParams.width = StandardowaSzerokosc
 
+        Button_reset.setOnClickListener {
 
+        }
         seekbarpion1.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(seek: SeekBar, progress: Int, fromUser: Boolean) {
                 obraz1.layoutParams.height = StandardowaWysokosc + progress
@@ -51,5 +56,11 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
+        fun changeProgressBarPion(){
+            progressBarPion.progress = (seekbarpion1.progress + seekbarpion2.progress + seekbarpion3.progress)/3
+        }
+        fun changeProgressBarPoziom(){
+            progressBarPion.progress = (seekbarPoziom1.progress + seekbarPoziom2.progress + seekbarPoziom3.progress)/3
+        }
     }
 }
