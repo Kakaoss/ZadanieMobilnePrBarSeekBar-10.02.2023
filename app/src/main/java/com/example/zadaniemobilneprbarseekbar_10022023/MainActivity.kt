@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
         seekbarPoziom1.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(seek: SeekBar, progress: Int, fromUser: Boolean) {
                 obraz1.scaleX =  progress/100f
-                changeProgressBarPion(progressBarPion,seekbarpion1,seekbarpion2,seekbarpion3);
+                changeProgressBarPoziom(progressBarPoziom,seekbarpion1,seekbarpion2,seekbarpion3);
             }
 
             override fun onStartTrackingTouch(seek: SeekBar?) {
@@ -106,7 +106,7 @@ class MainActivity : AppCompatActivity() {
         seekbarPoziom2.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(seek: SeekBar, progress: Int, fromUser: Boolean) {
                 obraz2.scaleX =  progress/100f
-                changeProgressBarPion(progressBarPion,seekbarpion1,seekbarpion2,seekbarpion3);
+                changeProgressBarPoziom(progressBarPoziom,seekbarpion1,seekbarpion2,seekbarpion3);
             }
 
             override fun onStartTrackingTouch(seek: SeekBar?) {
@@ -120,7 +120,7 @@ class MainActivity : AppCompatActivity() {
         seekbarPoziom3.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(seek: SeekBar, progress: Int, fromUser: Boolean) {
                 obraz3.scaleX =  progress/100f
-                changeProgressBarPion(progressBarPion,seekbarpion1,seekbarpion2,seekbarpion3);
+                changeProgressBarPoziom(progressBarPoziom,seekbarpion1,seekbarpion2,seekbarpion3);
             }
 
             override fun onStartTrackingTouch(seek: SeekBar?) {
