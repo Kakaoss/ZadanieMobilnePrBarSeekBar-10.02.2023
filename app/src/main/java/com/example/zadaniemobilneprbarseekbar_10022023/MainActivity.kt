@@ -45,6 +45,7 @@ class MainActivity : AppCompatActivity() {
             override fun onProgressChanged(seek: SeekBar, progress: Int, fromUser: Boolean) {
                 obraz1.layoutParams.height = StandardowaWysokosc + progress
                 obraz1.requestLayout();
+                changeProgressBarPion(progressBarPion,seekbarpion1,seekbarpion2,seekbarpion3);
             }
 
             override fun onStartTrackingTouch(seek: SeekBar?) {
@@ -56,11 +57,12 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        fun changeProgressBarPion(){
-            progressBarPion.progress = (seekbarpion1.progress + seekbarpion2.progress + seekbarpion3.progress)/3
-        }
-        fun changeProgressBarPoziom(){
-            progressBarPion.progress = (seekbarPoziom1.progress + seekbarPoziom2.progress + seekbarPoziom3.progress)/3
-        }
+
+    }
+    fun changeProgressBarPion(progressBarPion:ProgressBar,seekbarpion1:SeekBar,seekbarpion2:SeekBar,seekbarpion3:SeekBar){
+        progressBarPion.progress = (seekbarpion1.progress + seekbarpion2.progress + seekbarpion3.progress)/3
+    }
+    fun changeProgressBarPoziom(progressBarPion:ProgressBar,seekbarPoziom1:SeekBar,seekbarPoziom2:SeekBar,seekbarPoziom3:SeekBar){
+        progressBarPion.progress = (seekbarPoziom1.progress + seekbarPoziom2.progress + seekbarPoziom3.progress)/3
     }
 }
