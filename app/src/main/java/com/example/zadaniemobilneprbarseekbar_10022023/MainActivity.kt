@@ -41,6 +41,8 @@ class MainActivity : AppCompatActivity() {
             progressBarPoziom.progress = 100
             progressBarPion.progress = 100
         }
+
+        // FUNKCJE PION
         seekbarpion1.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(seek: SeekBar, progress: Int, fromUser: Boolean) {
                 obraz1.scaleY =  progress/100f
@@ -85,6 +87,50 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
+        // FUNKCJE POZIOM
+
+        seekbarPoziom1.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(seek: SeekBar, progress: Int, fromUser: Boolean) {
+                obraz1.scaleX =  progress/100f
+                changeProgressBarPion(progressBarPion,seekbarpion1,seekbarpion2,seekbarpion3);
+            }
+
+            override fun onStartTrackingTouch(seek: SeekBar?) {
+
+            }
+
+            override fun onStopTrackingTouch(seek: SeekBar?) {
+
+            }
+        })
+        seekbarPoziom2.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(seek: SeekBar, progress: Int, fromUser: Boolean) {
+                obraz2.scaleX =  progress/100f
+                changeProgressBarPion(progressBarPion,seekbarpion1,seekbarpion2,seekbarpion3);
+            }
+
+            override fun onStartTrackingTouch(seek: SeekBar?) {
+
+            }
+
+            override fun onStopTrackingTouch(seek: SeekBar?) {
+
+            }
+        })
+        seekbarPoziom3.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(seek: SeekBar, progress: Int, fromUser: Boolean) {
+                obraz3.scaleX =  progress/100f
+                changeProgressBarPion(progressBarPion,seekbarpion1,seekbarpion2,seekbarpion3);
+            }
+
+            override fun onStartTrackingTouch(seek: SeekBar?) {
+
+            }
+
+            override fun onStopTrackingTouch(seek: SeekBar?) {
+
+            }
+        })
 
 
     }
